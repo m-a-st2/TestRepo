@@ -1,0 +1,49 @@
+        // پیشوند نام (مثل شرکت - موسسه و ...) اضافه شود
+        [StringLength(30)]
+        public string PishvandNam { get; set; }
+
+        // استان محل دفتر مرکزی
+        public int? DaftarMarkazi_Ostan { get; set; }
+
+        // شهر محل دفتر مرکزی
+        [StringLength(20)]
+        public string DaftarMarkazi_Shahr { get; set; }
+
+        // آدرس دفتر مرکزی
+        [StringLength(100)]
+        public string DaftarMarkazi_Address { get; set; }
+
+        // تلفن دفتر مرکزی
+        [StringLength(25)]
+        public string DaftarMarkazi_Tel { get; set; }
+
+        // استان محل عمده فعالیت
+        public int? OmdeFaaliat_Ostan { get; set; }
+
+        // شهر محل عمده فعالیت
+        [StringLength(20)]
+        public string OmdeFaaliat_Shahr { get; set; }
+
+        // آدرس سایت اینترنتی
+        [StringLength(50)]
+        public string AddressWebsite { get; set; }
+
+        // نوع شخصیت حقوقی (سهامی عام و خاص، مسئولیت محدود و ...)
+        public int? NoeShakhsiatHoghughi { get; set; }
+
+        // رشته فعالیت
+        public int? ReshteFaaliat { get; set; }
+
+        // زمینه فعالیت
+        [StringLength(1000)]
+        public string ZamineFaaliat { get; set; }
+
+        // معرفی واحد
+        public string Moarefi { get; set; }
+
+        // شناسه ملی
+        [Column(TypeName = "char"), StringLength(11)]
+        public string ShenaseMelli { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? TarikhTasis { get; set; }
