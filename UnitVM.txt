@@ -1,0 +1,41 @@
+        [DisplayName("پیشوند نام"), StringLength(30)]
+        public string PishvandNam { get; set; }
+
+        [DisplayName("استان محل دفتر مرکزی"), JustLookups, UIHint("DropDown")]
+        public int? DaftarMarkazi_Ostan { get; set; }
+
+        [DisplayName("شهر محل دفتر مرکزی"), StringLength(20)]
+        public string DaftarMarkazi_Shahr { get; set; }
+
+        [DisplayName("آدرس محل دفتر مرکزی"), StringLength(100)]
+        public string DaftarMarkazi_Address { get; set; }
+
+        [DisplayName("تلفن دفتر مرکزی"), StringLength(25)]
+        public string DaftarMarkazi_Tel { get; set; }
+
+        [DisplayName("استان عمده فعالیت"), JustLookups, UIHint("DropDown")]
+        public int? OmdeFaaliat_Ostan { get; set; }
+
+        [DisplayName("شهر عمده فعالیت"), StringLength(20)]
+        public string OmdeFaaliat_Shahr { get; set; }
+
+        [DisplayName("آدرس وب سایت"), StringLength(50)]
+        public string AddressWebsite { get; set; }
+
+        [DisplayName("نوع شخصیت حقوقی"), JustLookups, UIHint("DropDown")]
+        public int? NoeShakhsiatHoghughi { get; set; }
+
+        [DisplayName("رشته فعالیت"), JustLookups, UIHint("DropDown")]
+        public int? ReshteFaaliat { get; set; }
+
+        [DisplayName("زمینه فعالیت"), StringLength(11)]
+        public string ZamineFaaliat { get; set; }
+
+        [DisplayName("تاریخچه و معرفی")]
+        public string Moarefi { get; set; }
+
+        [DisplayName("شناسه ملی"), StringLength(11), RegularExpression(@"^\d{11}$", ErrorMessage = "شناسه ملی باید شامل یازده رقم بدون فاصله و خط تیره باشد")]
+        public string ShenaseMelli { get; set; }
+
+        [DisplayName("تاریخ تاسیس"), DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        public DateTime? TarikhTasis { get; set; }
